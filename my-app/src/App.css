@@ -69,6 +69,7 @@
 
 .products-container{
   width: 100%;
+  min-height: 100%;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -88,4 +89,8 @@
   display: flex;
   justify-content: space-around;
   box-shadow: 0px 0px 10px #aaa;
+}
+
+.navigations h3:hover{
+  cursor: pointer;
 }

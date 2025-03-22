@@ -23,9 +23,9 @@ const AddProduct = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addProduct(newProduct));
-    alert("Product Added");
+    alert(`${newProduct.name}`);
     setNewProduct({
-      id: Date.now,
+      id: Date.now(),
       name: "",
       price: "",
       quantity: "",
@@ -33,7 +33,7 @@ const AddProduct = () => {
     // router("/cart")
   };
   return (
-    <div>
+    <div style={{width : "100%"}}>
       <h1>Add Product Page</h1>
 
       <form action="" className="input-form" onSubmit={handleSubmit}>
