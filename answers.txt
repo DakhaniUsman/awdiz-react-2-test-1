@@ -1,0 +1,109 @@
+1.
+    - React is a JavaScript library used to develop user interface of websites and web application.
+    - It uses component based approach where each section is build as a seperate component which ease the process of updating them.
+    - React uses Virtual DOM that increases the performance of website.
+    - Since it is a library it gives us the complete freedom of developing the websites as per our need, where as other frameworks like Angular restricts user freedom.
+    - It increases the development speed and ease the process of state management using additonal finctionalities like context and redux, rather than plain JavaScript.
+
+2.
+    - DOM is an tree representation of the complete web page where each element is trated as a node.
+    - Virtual DOM in react is a light weight copy of actual DOM.
+    - When we change an element in react a Virtual DOM is created.
+    - This Virtual DOM is then compared with the previous Virtual DOM and updates only that particular element which has been updated rather than updating the complete node.
+    - If changes are made in child element only the child element is updated, rather than creating a new DOM.
+
+3.
+    - React components are the seperate block of code written for a specific functionality.
+    - Like for navbar a seperate component of navbar is created which is then applied on every other component.
+    - For example if you are creating a button you will create a background component first which will have the background colour and structure of button. Then you will create the button component which will be used as a child component for the background component.
+    - In this way React components are created , using a component based approach reduces the development time and make updates easier.
+
+4.
+    - JSX stands for JavaScript XML.
+    - In JSX file we can use JavaScript along with HTML.
+    - Since in React we use state management which basically acts as a variable and is used to store some data.
+    - In the same component we can use this state inside HTML by writing them in {}.
+    - This way we don't have to create a seperate file of JavaScript and again call it into the web page.
+
+5.
+    - State in React is one of core part and is used the most while developing websites.
+    - State is an object which stores the data of the component and can used anywhere in the component within {}
+    - State is implemented by using the useState() hook provided by React.
+    - It provides two parameter one is the name of state and other is the function through which we can update the state.
+    - Syntax for state is as follows : 
+        const [counter, setCounter] = useState(0)
+      Here the counter is the name of the state and setCounter is the function used to update the state, also the 0 mentioned within the () of useState() hook is the initial value.
+    - props in React are used to transfer data from parent to child component.
+    - props are basically the name given to states that are to be transfered.
+    - These props are passes in the Route of component which are then imported into the component.
+
+6.
+    - key prop provides a unique identity to each item mentioned in the list.
+    - if key is not given to element its shows a warning that each item should have a unique identity.
+    - by using key we can also manipulate the data of any item we want.
+
+
+7.
+    - React hooks are like the predefined functions who are built to provide specific functionality.
+    - React hooks ease the process of defining the same functionality again and again.
+    - some of the examples of React hooks are useState(), useEffect(), useMemo(), useCallback() etc.
+
+8.
+    - useState() hook is used for state management, it provides a space to store data and can be updated using function. Whenever a state changes the component re-renders.
+
+    - useEffect() hook is used to run the side effects of components. We can use it to console something if our code runs or we can also use is to check presence or absence of the dependencies mentioned in []. useEffect() has multiple types depending on the use cases like with no dependency, empty dependency, single dependency and multiple dependencies.
+
+    - useRef() hook is used to prevent the component from re-rendering. We know that if a state changes the whole component re-renders but by using useRef() we can prevent that.
+
+9.
+    - React uses state management and function based approach to handle events.
+    - When an event occurs we run the respective function which can update the state and change the component accordingly.
+
+10. 
+    - Context API is provides a seperate space which is used for remote state management.
+    - We can seperate the complete state management process into a different space where we can handle it more efficiently with the help of Reducer.
+    - Here we have to create context first then create a Higher Order Component (HOC) which takes another component as a parameter and return the child component with provided additonal functionalities.
+    - We have to wrap our <App /> component with this HOC and use its provider.
+    - Then we can use these states any Component. 
+    - We can use Context API for small scale development as it re renders all the components where it is consumed for any change in state.
+
+11.
+
+12.
+    - A Higher Order Component (HOC) takes another component as a parameter and return the child component with provided additonal functionalities.
+    - We have to wrap our <App /> component with this HOC and use its provider.
+    - Then we can use these states any Component.
+    - HOC is used in context API.
+    - We can use Context API for small scale development as it re renders all the components where it is consumed for any change in state.
+
+13.
+    - The concept of prop drilling is to pass data from parent component into the child component.
+    - Here we define state in the parent component and pass the state along with a prop name in the Route of the component where we want to drill the data.
+    - Then in the Component we use the prop and have the access to states created in parent component.
+    - The major issue while using prop drilling comes when we are using nested components.
+    - In the nested chain of components if we want to use the data of parent component into the last child component we have to drill the data in each component till we reach the requried component. 
+    - This increases the work and decreases the performance, in order to avoid this we can use Context API for small scale development or Redux for large scale development.
+
+14.
+    - The concept of lazy loading is to intially load only the content which is first visible to the user at more priority.
+    - The rest of content will be loaded as the user scrolls over the page.
+    - This increases the performance as the browser dose'nt have to load everything at once.
+
+15.
+
+16.
+
+17.
+
+18.
+
+19.
+
+20.
+    - memo in react is a performance increasing feature, it checks the props of the component. If the props are changed it re renders the component or else it prevents it from re rendering. Like if we are using a nested component structure were we are using component within a component. So when any state change the whole component will re render like if we use counter in main component and use todo in nested child component, if we increment the counter the main component should re render but the child component todo w=should not re render.
+
+    - useMemo() hook is used to cache the result of function between re-render. We know that if a state changes the whole component re-renders and at every re render the functions are executed again. So we can use useMemo() to store the result of function between re-renders and if the value is same as previous one it prevens the function from re execution thereby increasing the performance.
+
+    - useCallback() is used to cache the function between re renders. When a component is rendered the functions are re created even tough it will return the same result. We can fix this issue by using useCallback() hook this checks wheater the result is same as previous or not if it is same as previous it prevent the function from re creating.
+
+    
